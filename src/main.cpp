@@ -1,9 +1,10 @@
 #include <iostream>
+#include "Robot.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cout << "Hello" << endl;
+    Robot r;
     return 0;
 }

@@ -1,9 +1,10 @@
 #include "WrongStateException.h"
 
-WrongStateException::WrongStateException(std::string state, std::string behaviour)
-    : state(state), behaviour(behaviour)
+WrongStateException::WrongStateException(std::string action)
+    : action(action)
 { }
 
 const char* WrongStateException::what() const throw () {
-    return "Can't '" + behaviour + "' in state '" + state + "'";
+    std::string msg("Can't '" + action + "' in current state");
+    return msg.c_str();
 }

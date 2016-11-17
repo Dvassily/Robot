@@ -4,11 +4,10 @@
 class WrongStateException : std::exception
 {
 private:
-    std::string state;
-    std::string behaviour;
+    std::string action;
     
 public:
-    WrongStateException(std::string state, std::string behaviour);
+    WrongStateException(std::string action);
     const char* what() const throw ();
 };
 
