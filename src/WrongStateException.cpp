@@ -5,5 +5,6 @@ WrongStateException::WrongStateException(std::string state, std::string behaviou
 { }
 
 const char* WrongStateException::what() const throw () {
-    return "Can't '" + behaviour + "' in state '" + state + "'";
+    std::string msg("Can't '" + behaviour + "' in state '" + state + "'");
+    return msg.c_str();
 }
