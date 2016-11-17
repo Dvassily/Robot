@@ -20,7 +20,7 @@ public:
     // void evaluerPlot(const Plot& p);
     void figer();
     void repartir();
-    void afficher();
+    // void afficher();
 };
 
 #endif // __ROBOT_H__
