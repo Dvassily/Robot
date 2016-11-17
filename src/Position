@@ -1,0 +1,20 @@
+#ifndef __ROBOT_H__
+#define __ROBOT_H__
+
+class Robot
+{
+public:
+    EtatRobot avancer(unsigned x, unsigned y);
+    EtatRobot tourner(string direction y);
+    EtatRobot saisir(const Objet& O);
+    EtatRobot poser();
+    int peser();
+    EtatRobot rencontrerPlot(const Plot& p);a
+    int evaluerPlot(const Plot& p);
+    void figer();
+    void repartir();
+    void afficher();
+    void changerEtat(EtatRobot e);
+};
+
+#endif // __ROBOT_H__
