@@ -7,6 +7,7 @@ class Robot;
 
 class Afficheur {
  public:
+    virtual ~Afficheur() { };
     virtual void afficher(const Robot& robot) const = 0;
 };
 

@@ -3,6 +3,8 @@
 
 using namespace std;
 
+AfficheurTexte::~AfficheurTexte() { }
+
 void AfficheurTexte::afficher(const Robot& robot) const {
     cout << "Etat courant : " << robot.getNomEtat() << endl
 	 << "Direction : " << robot.getDirection() << endl

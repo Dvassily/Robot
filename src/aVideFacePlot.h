@@ -6,9 +6,14 @@
 
 class aVideFacePlot : public EnRoute
 {
-public:
+ private:
+    static aVideFacePlot* instance;
+    
+ public:
     virtual EtatRobot* saisir() const;
     virtual std::string getNomEtat() const;
+    static aVideFacePlot* getInstance();
 };
 
 #endif // __AVIDEFACEPLOT_H__
+

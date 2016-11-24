@@ -5,18 +5,8 @@
 #include "WrongStateException.h"
 
 Robot::Robot()
-    : direction("EST"), etat(new aVideFacePlot()), objet(nullptr), position(0, 0), plot(nullptr)
+    : direction("EST"), etat(aVideFacePlot::getInstance()), objet(nullptr), position(0, 0), plot(nullptr)
 { }
-
-/*
-void Robot::avancer(unsigned x, unsigned y){
-    
-}
-
-void Robot::tourner(string direction y){
-
-}
-*/
 
 void Robot::saisir(Objet& o){
     try {
@@ -28,27 +18,6 @@ void Robot::saisir(Objet& o){
 	std::cout << e.what() << std::endl;
     }
 }
-
-/*
-void Robot::poser(){
-
-}
-
-
-int Robot::peser(){
-
-}
-
-
-void Robot::rencontrerPlot(const Plot& p){
-
-}
-
-
-void Robot::evaluerPlot(const Plot& p){
-
-}
-*/
 
 void Robot::figer(){
     try {
@@ -87,8 +56,6 @@ void Robot::detacherAfficheur(Afficheur* afficheur) {
 	    return;
 	}
     }
-
-    // Exception
 }
 
 std::string Robot::getNomEtat() const {

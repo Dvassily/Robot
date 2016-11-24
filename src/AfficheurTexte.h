@@ -4,6 +4,8 @@
 #include "Afficheur.h"
 
 class AfficheurTexte : public Afficheur {
+ public:
+    virtual ~AfficheurTexte();
     virtual void afficher(const Robot& robot) const;
 };
 
