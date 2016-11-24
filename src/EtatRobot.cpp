@@ -6,7 +6,7 @@ EtatRobot* EtatRobot::saisir() const {
     return nullptr;
 }
 
-EtatRobot* EtatRobot::figer() const {
+EtatRobot* EtatRobot::figer()  {
     throw WrongStateException("figer");
     return nullptr;    
 }

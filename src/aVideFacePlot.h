@@ -7,7 +7,7 @@
 class aVideFacePlot : public EnRoute
 {
 public:
-    virtual EtatRobot* saisir();
+    virtual EtatRobot* saisir() const;
 };
 
 #endif // __AVIDEFACEPLOT_H__

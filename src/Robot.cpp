@@ -1,3 +1,4 @@
+#include <typeinfo>
 #include <iostream>
 #include "Robot.h"
 #include "aVideFacePlot.h"
@@ -22,6 +23,7 @@ void Robot::saisir(const Objet& o){
 	etat = etat->saisir();
 	this->o = o;
     } catch(const WrongStateException &e) {
+	printf("-> %d\n", typeid(*etat) == typeid(aVideFacePlot));
 	std::cout << e.what() << std::endl;
     }
 }
@@ -67,20 +69,4 @@ void Robot::repartir(){
 
 void Robot::afficher(){
     
-}
-
-#include <cassert>
-#include <typeinfo>
-#include "enChargeFacePlot.h"
-
-
-void Robot::test() {
-    Robot r;
-    Objet o;
-
-    assert(typeid(*(r.etat)) == typeid(aVideFacePlot));
-    r.saisir(o);
-    //assert(typeid(*(r.etat)) == typeid(enChargeFacePlot));
-    r.figer();
-    r.repartir();
 }

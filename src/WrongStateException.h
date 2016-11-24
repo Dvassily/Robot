@@ -1,3 +1,6 @@
+#ifndef __WRONGSTATEEXCEPTION_H__
+#define __WRONGSTATEEXCEPTION_H__
+
 #include <exception>
 #include <string>
 
@@ -11,3 +14,4 @@ public:
     const char* what() const throw ();
 };
 
+#endif // __WRONGSTATEEXCEPTION_H__

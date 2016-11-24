@@ -12,7 +12,7 @@ $(EXE):$(OBJ)
 $(DOBJ)main.o:$(DSRC)main.cpp 
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)Robot.o:$(DSRC)Robot.cpp $(DINC)Robot.h
+$(DOBJ)Robot.o:$(DSRC)Robot.cpp $(DINC)Robot.h 
 	$(CC) $(FLAGS) -c $< -o $@ 
 
 $(DOBJ)EtatRobot.o:$(DSRC)EtatRobot.cpp $(DINC)EtatRobot.h
@@ -28,19 +28,19 @@ $(DOBJ)Plot.o:$(DSRC)Plot.cpp $(DINC)Plot.h
 $(DOBJ)Position.o:$(DSRC)Position.cpp $(DINC)Position.h
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)aVideFacePlot.o:$(DSRC)aVideFacePlot.cpp $(DINC)aVideFacePlot.h
+$(DOBJ)aVideFacePlot.o:$(DSRC)aVideFacePlot.cpp $(DINC)aVideFacePlot.h EtatRobot.h EtatRobot.cpp
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)enChargeFacePlot.o:$(DSRC)enChargeFacePlot.cpp $(DINC)enChargeFacePlot.h
+$(DOBJ)enChargeFacePlot.o:$(DSRC)enChargeFacePlot.cpp $(DINC)enChargeFacePlot.h EtatRobot.h EtatRobot.cpp
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)EnRoute.o:$(DSRC)EnRoute.cpp $(DINC)EnRoute.h
+$(DOBJ)EnRoute.o:$(DSRC)EnRoute.cpp $(DINC)EnRoute.h EtatRobot.h EtatRobot.cpp
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)Fige.o:$(DSRC)Fige.cpp $(DINC)Fige.h
+$(DOBJ)Fige.o:$(DSRC)Fige.cpp $(DINC)Fige.h EtatRobot.h EtatRobot.cpp
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)WrongStateException.o:$(DSRC)WrongStateException.cpp $(DINC)WrongStateException.h
+$(DOBJ)WrongStateException.o:$(DSRC)WrongStateException.cpp $(DINC)WrongStateException.h EtatRobot.h EtatRobot.cpp
 	$(CC) $(FLAGS) -c $< -o $@ 
 
 clean:

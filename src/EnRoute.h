@@ -7,7 +7,9 @@
 class EnRoute : public EtatRobot
 {
 public:
+    //virtual EtatRobot* saisir() const;
     virtual EtatRobot* figer();
+    //virtual EtatRobot* repartir() const;
 };
 
 #endif // __ENROUTE_H__

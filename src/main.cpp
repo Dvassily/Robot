@@ -6,7 +6,14 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     Robot r;
-    r.test();
+    Objet o;
+
+    r.saisir(o);
+    //assert(typeid(*(r.etat)) == typeid(enChargeFacePlot));
+    r.figer();
+    r.repartir();
+    //r.test();
+
     
     return 0;
 }

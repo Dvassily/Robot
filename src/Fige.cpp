@@ -4,6 +4,6 @@ Fige::Fige(EtatRobot* oldState)
     : oldState(oldState)
 { }
 
-EtatRobot* Fige::repartir() {
+EtatRobot* Fige::repartir() const {
     return oldState;
 }

@@ -2,8 +2,12 @@
 #define __ROBOT_H__
 
 #include <iostream>
+#include <vector>
 #include "Objet.h"
 #include "EtatRobot.h"
+#include "Afficheur.h"
+
+class Afficheur;
 
 class Robot
 {
@@ -11,6 +15,7 @@ private:
     std::string direction;
     EtatRobot* etat;
     Objet o;
+    std::vector<Afficheur*> afficheurs;
 
 public:
     Robot();
@@ -25,7 +30,8 @@ public:
     void repartir();
     void afficher();
 
-    void test();
+    void attacherAfficheur(Afficheur* afficheur);
+    void detacherAfficheur(Afficheur* afficheur);
 };
 
 #endif // __ROBOT_H__
