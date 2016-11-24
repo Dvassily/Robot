@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    Robot r;
+    Robot r("EST");
     AfficheurTexte* afficheurTexte = new AfficheurTexte();
     r.attacherAfficheur(afficheurTexte);
 

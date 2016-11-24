@@ -23,7 +23,7 @@ private:
     std::vector<Afficheur*> afficheurs;
 
 public:
-    Robot();
+    Robot(std::string direction);
     // void avancer(unsigned x, unsigned y);
     // void tourner(string direction y);
     void saisir(Objet& o);

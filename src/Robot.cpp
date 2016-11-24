@@ -4,8 +4,8 @@
 #include "aVideFacePlot.h"
 #include "WrongStateException.h"
 
-Robot::Robot()
-    : direction("EST"), etat(aVideFacePlot::getInstance()), objet(nullptr), position(0, 0), plot(nullptr)
+Robot::Robot(std::string direction)
+    : direction(direction), etat(aVideFacePlot::getInstance()), objet(nullptr), position(0, 0), plot(nullptr)
 { }
 
 void Robot::saisir(Objet& o){
