@@ -7,7 +7,7 @@
 class EnRoute : public EtatRobot
 {
 public:
-    EtatRobot* figer();
+    virtual EtatRobot* figer();
 };
 
 #endif // __ENROUTE_H__

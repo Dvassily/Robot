@@ -2,16 +2,16 @@
 #include "WrongStateException.h"
 
 EtatRobot* EtatRobot::saisir() const {
-    throw new WrongStateException("saisir");
+    throw WrongStateException("saisir");
     return nullptr;
 }
 
-EtatRobot* EtatRobot::evaluerPlot() const {
-    throw new WrongStateException("evaluerPlot");
+EtatRobot* EtatRobot::figer() const {
+    throw WrongStateException("figer");
     return nullptr;    
 }
 
-EtatRobot* EtatRobot::figer() const {
-    throw new WrongStateException("figer");
+EtatRobot* EtatRobot::repartir() const {
+    throw WrongStateException("repartir");
     return nullptr;    
 }

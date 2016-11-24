@@ -4,7 +4,7 @@
 class WrongStateException : std::exception
 {
 private:
-    std::string action;
+    std::string msg;
     
 public:
     WrongStateException(std::string action);

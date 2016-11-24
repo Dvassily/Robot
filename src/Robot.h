@@ -9,11 +9,14 @@ class Robot
 {
 private:
     std::string direction;
+    EtatRobot* etat;
+    Objet o;
 
 public:
+    Robot();
     // void avancer(unsigned x, unsigned y);
     // void tourner(string direction y);
-    void saisir(const Objet& O);
+    void saisir(const Objet& o);
     // void poser();
     // int peser();
     // void rencontrerPlot(const Plot& p);a
@@ -21,6 +24,8 @@ public:
     void figer();
     void repartir();
     void afficher();
+
+    void test();
 };
 
 #endif // __ROBOT_H__

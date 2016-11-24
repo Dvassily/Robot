@@ -10,7 +10,7 @@ private:
     
 public:
     Fige(EtatRobot* oldState);
-    EtatRobot* repartir();
+    virtual EtatRobot* repartir();
 };
 
 #endif // __FIGE_H__
