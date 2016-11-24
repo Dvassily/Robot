@@ -12,10 +12,10 @@ void Position::sety(int y) {
     this->y = y;
 }
 
-int Position::getx() {
+int Position::getx() const {
     return x;
 }
 
-int Position::gety() {
+int Position::gety() const{
     return y;
 }

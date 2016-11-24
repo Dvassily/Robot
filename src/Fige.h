@@ -11,6 +11,7 @@ private:
 public:
     Fige(EtatRobot* oldState);
     virtual EtatRobot* repartir() const;
+    virtual std::string getNomEtat() const;
 };
 
 #endif // __FIGE_H__

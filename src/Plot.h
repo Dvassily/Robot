@@ -3,7 +3,11 @@
 
 class Plot
 {
-public:
+ private:
+    int hauteur;
+    
+ public:
+    int getHauteur() const; 
 };
 
 #endif // __PLOT_H__

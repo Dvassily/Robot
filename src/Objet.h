@@ -3,7 +3,12 @@
 
 class Objet
 {
+private:
+    int poids;
+    
 public:
+    Objet(int poids);
+    int getPoids() const;
 };
 
 #endif // __OBJET_H__

@@ -11,8 +11,8 @@ public:
     Position(int x, int y);
     void setx(int x);
     void sety(int y);
-    int getx();
-    int gety();
+    int getx() const;
+    int gety() const;
 };
 
 #endif // __POSITION_H__

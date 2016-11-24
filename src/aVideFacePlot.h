@@ -8,6 +8,7 @@ class aVideFacePlot : public EnRoute
 {
 public:
     virtual EtatRobot* saisir() const;
+    virtual std::string getNomEtat() const;
 };
 
 #endif // __AVIDEFACEPLOT_H__

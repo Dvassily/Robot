@@ -6,8 +6,8 @@
 class Robot;
 
 class Afficheur {
-public:
-    virtual void afficher(const Robot& robot) const;
+ public:
+    virtual void afficher(const Robot& robot) const = 0;
 };
 
 #endif // __AFFICHEUR_H__

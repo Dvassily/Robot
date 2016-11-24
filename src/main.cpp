@@ -1,19 +1,19 @@
 #include <iostream>
 #include "Robot.h"
+#include "AfficheurTexte.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
     Robot r;
-    Objet o;
-
+    r.attacherAfficheur(new AfficheurTexte());
+    Objet o(7);
+    
+    r.afficher();
     r.saisir(o);
-    //assert(typeid(*(r.etat)) == typeid(enChargeFacePlot));
     r.figer();
     r.repartir();
-    //r.test();
-
     
     return 0;
 }

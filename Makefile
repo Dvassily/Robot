@@ -4,7 +4,7 @@ FLAGS=-Wall
 DSRC=src/
 DINC=src/
 
-OBJ=$(DOBJ)main.o $(DOBJ)Robot.o $(DOBJ)EtatRobot.o $(DOBJ)Objet.o $(DOBJ)Plot.o $(DOBJ)Position.o $(DOBJ)aVideFacePlot.o $(DOBJ)enChargeFacePlot.o $(DOBJ)EnRoute.o $(DOBJ)Fige.o $(DOBJ)WrongStateException.o
+OBJ=$(DOBJ)main.o $(DOBJ)Robot.o $(DOBJ)EtatRobot.o $(DOBJ)Objet.o $(DOBJ)Plot.o $(DOBJ)Position.o $(DOBJ)aVideFacePlot.o $(DOBJ)enChargeFacePlot.o $(DOBJ)EnRoute.o $(DOBJ)Fige.o $(DOBJ)WrongStateException.o $(DOBJ)AfficheurTexte.o
 
 $(EXE):$(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(EXE)
@@ -28,20 +28,24 @@ $(DOBJ)Plot.o:$(DSRC)Plot.cpp $(DINC)Plot.h
 $(DOBJ)Position.o:$(DSRC)Position.cpp $(DINC)Position.h
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)aVideFacePlot.o:$(DSRC)aVideFacePlot.cpp $(DINC)aVideFacePlot.h EtatRobot.h EtatRobot.cpp
+$(DOBJ)aVideFacePlot.o:$(DSRC)aVideFacePlot.cpp $(DINC)aVideFacePlot.h EtatRobot.o
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)enChargeFacePlot.o:$(DSRC)enChargeFacePlot.cpp $(DINC)enChargeFacePlot.h EtatRobot.h EtatRobot.cpp
+$(DOBJ)enChargeFacePlot.o:$(DSRC)enChargeFacePlot.cpp $(DINC)enChargeFacePlot.h EtatRobot.o
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)EnRoute.o:$(DSRC)EnRoute.cpp $(DINC)EnRoute.h EtatRobot.h EtatRobot.cpp
+$(DOBJ)EnRoute.o:$(DSRC)EnRoute.cpp $(DINC)EnRoute.h EtatRobot.o
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)Fige.o:$(DSRC)Fige.cpp $(DINC)Fige.h EtatRobot.h EtatRobot.cpp
+$(DOBJ)Fige.o:$(DSRC)Fige.cpp $(DINC)Fige.h EtatRobot.o
 	$(CC) $(FLAGS) -c $< -o $@ 
 
-$(DOBJ)WrongStateException.o:$(DSRC)WrongStateException.cpp $(DINC)WrongStateException.h EtatRobot.h EtatRobot.cpp
+$(DOBJ)WrongStateException.o:$(DSRC)WrongStateException.cpp $(DINC)WrongStateException.h
 	$(CC) $(FLAGS) -c $< -o $@ 
+
+$(DOBJ)AfficheurTexte.o:$(DSRC)AfficheurTexte.cpp $(DINC)AfficheurTexte.h 
+	$(CC) $(FLAGS) -c $< -o $@ 
+
 
 clean:
 	rm -f ./$(DSRC)*~ ./$(DOBJ)*.o ./*~ ./$(DINC)*~ ./$(EXE)

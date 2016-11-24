@@ -3,6 +3,8 @@
 
 #include "EnRoute.h"
 
-class enChargeFacePlot : public EnRoute { };
+class enChargeFacePlot : public EnRoute {
+    virtual std::string getNomEtat() const;
+};
 
 #endif // __ENCHARGEFACEPLOT_H__

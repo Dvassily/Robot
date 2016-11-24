@@ -16,7 +16,7 @@ public:
     virtual EtatRobot* figer();
     virtual EtatRobot* repartir() const;
 
-    virtual std::string getStateName() const = 0;
+    virtual std::string getNomEtat() const = 0;
 };
 
 #endif // __ETATROBOT_H__
