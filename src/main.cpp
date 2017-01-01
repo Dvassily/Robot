@@ -1,11 +1,19 @@
 #include <iostream>
 #include "Robot.h"
 #include "AfficheurTexte.h"
+#include "LecteurFichier.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+    Robot r("EST");
+    AfficheurTexte* afficheurTexte = new AfficheurTexte();
+    r.attacherAfficheur(afficheurTexte);
+    
+    //LecteurFichier lecteur(r, "commandes.txt");
+    //lecteur.lireFichier();
+
     Robot r("EST");
     AfficheurTexte* afficheurTexte = new AfficheurTexte();
     r.attacherAfficheur(afficheurTexte);
@@ -18,6 +26,6 @@ int main(int argc, char *argv[])
     r.repartir();
 
     delete afficheurTexte;
-    
+
     return 0;
 }

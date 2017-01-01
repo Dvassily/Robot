@@ -7,6 +7,7 @@ class Plot
     int hauteur;
     
  public:
+    Plot(int hauteur);
     int getHauteur() const; 
 };
 
