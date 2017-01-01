@@ -14,10 +14,6 @@ int main(int argc, char *argv[])
     //LecteurFichier lecteur(r, "commandes.txt");
     //lecteur.lireFichier();
 
-    Robot r("EST");
-    AfficheurTexte* afficheurTexte = new AfficheurTexte();
-    r.attacherAfficheur(afficheurTexte);
-
     Objet o(7);
     
     r.afficher();
