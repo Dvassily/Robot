@@ -8,12 +8,16 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    std::cout << (Commande::commandesInscrites).size() << std::endl;
     Robot r("E");
     AfficheurTexte* afficheurTexte = new AfficheurTexte();
     r.attacherAfficheur(afficheurTexte);
     
-    LecteurFichier lecteur(r, "commandes.txt");
+    map<string, Plot*> plots;
+    plots["P1"] = new Plot(15);
+    map<string, Objet*> objets;
+    objets["O1"] = new Objet(25);
+    //LecteurFichier lecteur(r, "commandes.txt", plots, objets);
+    LecteurFichier lecteur(r, "commandes.txt", plots, objets);
     lecteur.lireFichier();
     /*
     Plot p(3);

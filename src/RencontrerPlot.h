@@ -6,12 +6,18 @@
 class RencontrerPlot : public CommandeRobot
 {
  private:
-    static Plot plot;
-
+    static RencontrerPlot rp;
+    Plot *plot;
     
  public:
+    RencontrerPlot(const std::string& s);
+    RencontrerPlot();
     virtual ~RencontrerPlot();
     virtual void executer() const;
+    virtual Commande* constructeurVirtuel() const;
+    virtual void setArgs(std::vector<std::string> tokens,
+			 const std::map<std::string, Plot*> &plots,
+			 const std::map<std::string, Objet*> &objets);
 };
 
 #endif /* RENCONTRERPLOT_H */

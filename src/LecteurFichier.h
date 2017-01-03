@@ -7,9 +7,14 @@ class LecteurFichier {
  private:
     Robot& robot;
     const std::string filePath;
+    const std::map<std::string, Plot*> &plots;
+    const std::map<std::string, Objet*> &objets;
     
  public:
-    LecteurFichier(Robot& robot, const std::string& filePath);
+    LecteurFichier(Robot& robot,
+		   const std::string& filePath,
+		   const std::map<std::string, Plot*> &plots,
+		   const std::map<std::string, Objet*> &objets);
     void lireFichier() const;
 };
 

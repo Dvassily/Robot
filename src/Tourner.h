@@ -6,12 +6,18 @@
 class Tourner : public CommandeRobot
 {
  private:
+    static Tourner t;
     std::string direction;
     
  public:
-    //Tourner(std::string direction);
+    Tourner(const std::string& s);
+    Tourner();
     virtual ~Tourner();
     virtual void executer() const;
+    virtual Commande* constructeurVirtuel() const;
+    virtual void setArgs(std::vector<std::string> tokens,
+			 const std::map<std::string, Plot*> &plots,
+			 const std::map<std::string, Objet*> &objets);
 };
 
 #endif /* TOURNER_H */

@@ -10,10 +10,13 @@ protected:
     Robot* robot;
     
 public:
-    CommandeRobot(Robot& robot);
     CommandeRobot();
+    CommandeRobot(const std::string& s);
     virtual ~CommandeRobot();
     virtual void executer() const = 0;
+    virtual void setArgs(std::vector<std::string> tokens,
+			 const std::map<std::string, Plot*> &plots,
+			 const std::map<std::string, Objet*> &objets);
     void setRobot(Robot& robot);
 };
 

@@ -1,8 +1,6 @@
-> Ajouter arguments avancer, ...
-> Arranger rencontrerplot(plot) (fuite mémoire, etc)
-> Deplacer objet dans plot
+> Exceptions commandes
 > Direction enum
-
+> Deplacer objet dans plot
 
 > Traiter argument SAISIR
 > Ajouter exception unknown command

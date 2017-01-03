@@ -5,9 +5,15 @@
 
 class Poser : public CommandeRobot
 {
+ private:
+    static Poser p;
+    
 public:
+    Poser(const std::string& s);
+    Poser();
     virtual ~Poser();
     virtual void executer() const;
+    virtual Commande* constructeurVirtuel() const;
 };
 
 

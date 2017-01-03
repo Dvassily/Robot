@@ -1,11 +1,22 @@
 #include "Peser.h"
 
-Peser::~Peser()
+Peser Peser::p("PESER");
+
+Peser::Peser(const std::string& s)
+    : CommandeRobot(s)
 { }
 
+Peser::Peser()
+{ }
+
+Peser::~Peser()
+{ }
 
 void Peser::executer() const
 {
     robot->peser();
 }
 
+Commande* Peser::constructeurVirtuel() const {
+    return new Peser();
+}

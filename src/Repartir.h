@@ -5,9 +5,15 @@
 
 class Repartir : public CommandeRobot
 {
+ private:
+    static Repartir s;
+    
 public:
+    Repartir(const std::string& s);
+    Repartir();
     virtual ~Repartir();
     virtual void executer() const;
+    virtual Commande* constructeurVirtuel() const;
 };
 
 

@@ -6,13 +6,18 @@
 
 class Commande
 {
- public:
-    static std::map<std::string, Commande*> commandesInscrites; 
+ private:
+    static std::map<std::string, Commande*>& commandesInscrites();
    
  public:
+    Commande();
+    Commande(const std::string &s);
     virtual void executer() const = 0;
     virtual void setArgs(std::string args[]);
     virtual ~Commande();
+    virtual Commande* constructeurVirtuel() const = 0;
+
+    static Commande* nouvelleCommande(const std::string& s);
 };
 
 

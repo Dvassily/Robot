@@ -5,9 +5,15 @@
 
 class Peser : public CommandeRobot
 {
-public:
+ private:
+    static Peser p;
+    
+ public:
+    Peser(const std::string& s);
+    Peser();
     virtual ~Peser();
     virtual void executer() const;
+    virtual Commande* constructeurVirtuel() const;
 };
 
 

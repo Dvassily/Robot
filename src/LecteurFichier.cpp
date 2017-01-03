@@ -19,8 +19,14 @@
 
 using namespace std;
 
-LecteurFichier::LecteurFichier(Robot& robot, const string& filePath)
-    : robot(robot), filePath(filePath)
+LecteurFichier::LecteurFichier(Robot& robot,
+			       const string& filePath,
+			       const std::map<std::string, Plot*> &plots,
+			       const std::map<std::string, Objet*> &objets)
+    : robot(robot),
+      filePath(filePath),
+      plots(plots),
+      objets(objets)
 { }
 
 void LecteurFichier::lireFichier() const {
@@ -39,35 +45,11 @@ void LecteurFichier::lireFichier() const {
 	     istream_iterator<string>(),
 	     back_inserter(command));
 
-	CommandeRobot* c = nullptr;
-	
-	if(command[0] == "SAISIR") {
-	    c = new Saisir(objet);
-	} else if (command[0] == "FIGER") {
-	    c = new Figer();
-	} else if (command[0] == "REPARTIR") {
-	    c = new Repartir();
-	} else if (command[0] == "AVANCER") {
-	    //c = new Avancer(stoi(command[1]), stoi(command[2]));
-	    c = new Avancer();
-	} else if (command[0] == "TOURNER") {
-	    //c = new Tourner(command[1]);
-	    c = new Tourner();
-	} else if (command[0] == "POSER") {
-	    c = new Poser();
-	} else if (command[0] == "PESER") {
-	    c = new Peser();
-	} else if (command[0] == "RENCONTRERPLOT") {
-	    c = new RencontrerPlot();
-	} else if (command[0] == "EVALUERPLOT") {
-	    c = new EvaluerPlot();
-	} else {
-	    cerr << "UNKNOWN COMMAND" << endl;
-	    return;
-	}
+	CommandeRobot* c = (CommandeRobot*) Commande::nouvelleCommande(command[0]);
 
 	if (c != nullptr) {
 	    c->setRobot(robot);
+	    c->setArgs(command, plots, objets);
 	    c->executer();
 	    delete c;
 	}
