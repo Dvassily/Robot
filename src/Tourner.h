@@ -9,7 +9,7 @@ class Tourner : public CommandeRobot
     std::string direction;
     
  public:
-    Tourner(Robot &r, std::string direction);
+    //Tourner(std::string direction);
     virtual ~Tourner();
     virtual void executer() const;
 };

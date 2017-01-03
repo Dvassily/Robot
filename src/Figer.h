@@ -6,7 +6,6 @@
 class Figer : public CommandeRobot
 {
 public:
-    Figer(Robot& r);
     virtual ~Figer();
     virtual void executer() const;
 };

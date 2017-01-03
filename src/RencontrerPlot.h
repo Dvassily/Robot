@@ -6,10 +6,10 @@
 class RencontrerPlot : public CommandeRobot
 {
  private:
-    Plot& plot;
+    static Plot plot;
+
     
  public:
-    RencontrerPlot(Robot &r, Plot& plot);
     virtual ~RencontrerPlot();
     virtual void executer() const;
 };

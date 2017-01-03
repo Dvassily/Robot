@@ -24,13 +24,13 @@ private:
 
 public:
     Robot(std::string direction);
-    // void avancer(unsigned x, unsigned y);
-    // void tourner(string direction y);
+    void avancer(unsigned x, unsigned y);
+    void tourner(std::string direction);
     void saisir(Objet& o);
-    // void poser();
-    // int peser();
-    // void rencontrerPlot(const Plot& p);a
-    // void evaluerPlot(const Plot& p);
+    void poser();
+    int peser();
+    void rencontrerPlot(Plot& p);
+    void evaluerPlot();
     void figer();
     void repartir();
     void afficher();

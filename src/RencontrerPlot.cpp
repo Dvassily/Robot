@@ -1,8 +1,7 @@
 #include "RencontrerPlot.h"
+#include "Objet.h"
 
-RencontrerPlot::RencontrerPlot(Robot& r, Plot& p)
-    : CommandeRobot(r), plot(p)
-{ }
+Plot RencontrerPlot::plot(5, new Objet(3));
 
 RencontrerPlot::~RencontrerPlot()
 { }
@@ -10,5 +9,5 @@ RencontrerPlot::~RencontrerPlot()
 
 void RencontrerPlot::executer() const
 {
-    robot.rencontrerPlot(plot);
+    robot->rencontrerPlot(plot);
 }

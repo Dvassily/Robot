@@ -7,12 +7,14 @@
 class CommandeRobot : public Commande
 {
 protected:
-    Robot& robot;
+    Robot* robot;
     
 public:
     CommandeRobot(Robot& robot);
+    CommandeRobot();
     virtual ~CommandeRobot();
     virtual void executer() const = 0;
+    void setRobot(Robot& robot);
 };
 
 

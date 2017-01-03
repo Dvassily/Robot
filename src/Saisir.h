@@ -9,7 +9,7 @@ class Saisir : public CommandeRobot
     Objet& objet;
     
  public:
-    Saisir(Robot &r, Objet& o);
+    Saisir(Objet& o);
     virtual ~Saisir();
     virtual void executer() const;
 };

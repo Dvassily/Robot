@@ -10,7 +10,7 @@ class Avancer : public CommandeRobot
     unsigned y;
     
  public:
-    Avancer(Robot &r, unsigned x, unsigned y);
+    //Avancer(unsigned x, unsigned y);
     virtual ~Avancer();
     virtual void executer() const;
 };

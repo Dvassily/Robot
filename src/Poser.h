@@ -6,7 +6,6 @@
 class Poser : public CommandeRobot
 {
 public:
-    Poser(Robot& r);
     virtual ~Poser();
     virtual void executer() const;
 };

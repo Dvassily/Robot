@@ -1,14 +1,15 @@
 #include "Avancer.h"
-
-Avancer::Avancer(Robot &r, unsigned x, unsigned y)
-    : CommandeRobot(r), x(x), y(y)
+#include "Commande.h"
+/*
+Avancer::Avancer(unsigned x, unsigned y)
+    : x(x), y(y)
 { }
-
+*/
 Avancer::~Avancer()
 { }
 
 
 void Avancer::executer() const
 {
-    robot.avancer(x, y);
+    robot->avancer(0, 0);
 }

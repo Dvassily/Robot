@@ -9,7 +9,13 @@
 #include "Saisir.h"
 #include "Figer.h"
 #include "Repartir.h"
+#include "Avancer.h"
+#include "Tourner.h"
+#include "RencontrerPlot.h"
 #include "AfficheurTexte.h"
+#include "Poser.h"
+#include "Peser.h"
+#include "EvaluerPlot.h"
 
 using namespace std;
 
@@ -33,20 +39,35 @@ void LecteurFichier::lireFichier() const {
 	     istream_iterator<string>(),
 	     back_inserter(command));
 
-	Commande* c = nullptr;
+	CommandeRobot* c = nullptr;
 	
 	if(command[0] == "SAISIR") {
-	    c = new Saisir(robot, objet);
+	    c = new Saisir(objet);
 	} else if (command[0] == "FIGER") {
-	    c = new Figer(robot);
+	    c = new Figer();
 	} else if (command[0] == "REPARTIR") {
-	    c = new Repartir(robot);
+	    c = new Repartir();
+	} else if (command[0] == "AVANCER") {
+	    //c = new Avancer(stoi(command[1]), stoi(command[2]));
+	    c = new Avancer();
+	} else if (command[0] == "TOURNER") {
+	    //c = new Tourner(command[1]);
+	    c = new Tourner();
+	} else if (command[0] == "POSER") {
+	    c = new Poser();
+	} else if (command[0] == "PESER") {
+	    c = new Peser();
+	} else if (command[0] == "RENCONTRERPLOT") {
+	    c = new RencontrerPlot();
+	} else if (command[0] == "EVALUERPLOT") {
+	    c = new EvaluerPlot();
 	} else {
-	    cerr << "ERROR" << endl;
+	    cerr << "UNKNOWN COMMAND" << endl;
 	    return;
 	}
 
 	if (c != nullptr) {
+	    c->setRobot(robot);
 	    c->executer();
 	    delete c;
 	}

@@ -1,7 +1,7 @@
 #include "Saisir.h"
 
-Saisir::Saisir(Robot& r, Objet& o)
-    : CommandeRobot(r), objet(o)
+Saisir::Saisir(Objet& o)
+    : objet(o)
 { }
 
 Saisir::~Saisir()
@@ -10,5 +10,5 @@ Saisir::~Saisir()
 
 void Saisir::executer() const
 {
-    robot.saisir(objet);
+    robot->saisir(objet);
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "AfficheurTexte.h"
 
+
 using namespace std;
 
 AfficheurTexte::~AfficheurTexte() { }

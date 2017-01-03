@@ -6,7 +6,6 @@
 class EvaluerPlot : public CommandeRobot
 {
 public:
-    EvaluerPlot(Robot& r);
     virtual ~EvaluerPlot();
     virtual void executer() const;
 };

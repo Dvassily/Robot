@@ -11,6 +11,8 @@ class aVideFacePlot : public EnRoute
     
  public:
     virtual EtatRobot* saisir() const;
+    virtual EtatRobot* tourner(std::string nvelledirection, std::string directionInitiale) const;
+    virtual EtatRobot* evaluerPlot() const;
     virtual std::string getNomEtat() const;
     static aVideFacePlot* getInstance();
 };

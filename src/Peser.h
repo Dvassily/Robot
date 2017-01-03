@@ -6,7 +6,6 @@
 class Peser : public CommandeRobot
 {
 public:
-    Peser(Robot& r);
     virtual ~Peser();
     virtual void executer() const;
 };

@@ -1,0 +1,10 @@
+> Ajouter arguments avancer, ...
+> Arranger rencontrerplot(plot) (fuite mémoire, etc)
+> Deplacer objet dans plot
+> Direction enum
+
+
+> Traiter argument SAISIR
+> Ajouter exception unknown command
+> Supprimer paramètres etatrobot
+> Faire évaluerPlot

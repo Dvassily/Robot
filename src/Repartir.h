@@ -6,7 +6,6 @@
 class Repartir : public CommandeRobot
 {
 public:
-    Repartir(Robot& r);
     virtual ~Repartir();
     virtual void executer() const;
 };
