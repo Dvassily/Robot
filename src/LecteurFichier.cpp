@@ -17,6 +17,7 @@
 #include "Peser.h"
 #include "EvaluerPlot.h"
 #include "DefaireCommande.h"
+#include "DefaireException.h"
 
 using namespace std;
 
@@ -37,9 +38,9 @@ void LecteurFichier::lireFichier() {
     ifstream ifs(filePath);
 
     string line;
+
     while (getline(ifs, line)) {
 	vector<string> command;
-
 	istringstream iss(line);
 
 	copy(istream_iterator<string>(iss),
@@ -47,20 +48,27 @@ void LecteurFichier::lireFichier() {
 	     back_inserter(command));
 
 	CommandeRobot* c = nullptr;
-	std::cout << command[0] << std::endl;
-	if (command[0] == "DEFAIRE") {
-
-	} else {
+	
+	if (command[0] != "DEFAIRE") {
 	    c = (CommandeRobot*) Commande::nouvelleCommande(command[0]);
+	} else {
+	    c = new DefaireCommande(history.back());
+	    history.pop_back();
 	}
 
 	if (c != nullptr) {
 	    c->setRobot(robot);
 	    c->setArgs(command, plots, objets);
-	    c->executer();
 
-	    history.push_back(c);
-	    delete c;
+	    try {
+		c->executer();
+	    } catch(DefaireException& e) {
+		std::cout << e.what() << std::endl;
+	    }
+
+	    if (command[0] != "DEFAIRE")
+		history.push_back(c);
 	}
     }
+
 }

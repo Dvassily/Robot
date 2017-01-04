@@ -19,7 +19,7 @@ void Repartir::executer()
 }
 
 void Repartir::desexecuter() const {
-    
+    robot->figer();
 }
 
 Commande* Repartir::constructeurVirtuel() const {

@@ -14,11 +14,12 @@ Poser::~Poser()
 
 void Poser::executer()
 {
+    this->oldObjet = robot->getObjet();
     robot->poser();
 }
 
 void Poser::desexecuter() const {
-    
+    robot->saisir(*this->oldObjet);
 }
 
 Commande* Poser::constructeurVirtuel() const {

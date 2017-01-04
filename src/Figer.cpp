@@ -18,7 +18,7 @@ void Figer::executer()
 }
 
 void Figer::desexecuter() const {
-    
+    robot->repartir();
 }
 
 Commande* Figer::constructeurVirtuel() const {

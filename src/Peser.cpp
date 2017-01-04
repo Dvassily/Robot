@@ -1,4 +1,5 @@
 #include "Peser.h"
+#include "DefaireException.h"
 
 Peser Peser::p("PESER");
 
@@ -18,7 +19,7 @@ void Peser::executer()
 }
 
 void Peser::desexecuter() const {
-    
+    throw DefaireException("PESER");
 }
 
 Commande* Peser::constructeurVirtuel() const {

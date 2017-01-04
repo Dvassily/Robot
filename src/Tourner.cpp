@@ -4,7 +4,9 @@ Tourner Tourner::t("TOURNER");
 
 Tourner::Tourner(const std::string& s)
     : CommandeRobot(s)
-{ }
+{
+
+}
 
 Tourner::Tourner()
 { }
@@ -14,11 +16,12 @@ Tourner::~Tourner()
 
 void Tourner::executer()
 {
+    this->oldDirection = robot->getDirection();
     robot->tourner(direction);
 }
 
 void Tourner::desexecuter() const {
-    
+    robot->tourner(this->oldDirection);
 }
 
 Commande* Tourner::constructeurVirtuel() const {

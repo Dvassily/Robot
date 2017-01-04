@@ -8,6 +8,7 @@ class RencontrerPlot : public CommandeRobot
  private:
     static RencontrerPlot rp;
     Plot *plot;
+    Plot *oldPlot;
     
  public:
     RencontrerPlot(const std::string& s);

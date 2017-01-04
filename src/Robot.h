@@ -42,9 +42,7 @@ public:
     std::string getNomEtat() const;
     Objet* getObjet() const;
     Position getPosition() const;
-    const Plot* getPlot() const;
-
-    void setPosition(const Position& position);
+    Plot* getPlot() const;
 };
 
 #endif // __ROBOT_H__

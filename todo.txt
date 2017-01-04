@@ -1,8 +1,9 @@
 > Exceptions commandes (historique vide, ...)
 > Direction enum
 > Deplacer objet dans plot
-
-> Traiter argument SAISIR
-> Ajouter exception unknown command
+> Supprimer plot quand defaire rencontrerPlot
 > Supprimer paramètres etatrobot
-> Faire évaluerPlot
+> Remplacer "PESER" -> constante
+
+
+

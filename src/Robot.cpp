@@ -60,7 +60,7 @@ void Robot::poser(){
 int Robot::peser(){
     try {
 	etat = etat->peser();
-	std::cout << "Poids objet : " << objet->getPoids() << std::endl;
+	std::cout << "Poids objet : " << objet->getPoids() << std::endl << std::endl;
     } catch(WrongStateException e) {
 	std::cout << e.what() << std::endl;
 	return 0;
@@ -83,7 +83,7 @@ void Robot::rencontrerPlot(Plot& plot) {
 void Robot::evaluerPlot() {
     try {
 	etat = etat->evaluerPlot();
-	std::cout << "EVALUER PLOT" << std::endl << std::endl;
+	std::cout << "Hauteur plot : " << plot->getHauteur() << std::endl << std::endl;
     } catch (const WrongStateException &e) {
 	std::cout << e.what() << std::endl;		
     }
@@ -143,11 +143,6 @@ Position Robot::getPosition() const {
     return position;
 }
 
-const Plot* Robot::getPlot() const {
+Plot* Robot::getPlot() const {
     return plot;
-}
-
-void Robot::setPosition(const Position& position) {
-    this->position.setx(position.getx());
-    this->position.sety(position.gety());
 }

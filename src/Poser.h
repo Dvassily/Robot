@@ -7,8 +7,9 @@ class Poser : public CommandeRobot
 {
  private:
     static Poser p;
+    Objet* oldObjet;
     
-public:
+ public:
     Poser(const std::string& s);
     Poser();
     virtual ~Poser();

@@ -8,6 +8,7 @@ class Tourner : public CommandeRobot
  private:
     static Tourner t;
     std::string direction;
+    std::string oldDirection;
     
  public:
     Tourner(const std::string& s);

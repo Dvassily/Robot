@@ -20,9 +20,7 @@ void Avancer::executer()
 }
 
 void Avancer::desexecuter() const {
-    std::cout << "AvDes" << std::endl;
-    robot->setPosition(this->position);
-    robot->afficher();
+    robot->avancer(position.getx(), position.gety());
 }
 
 Commande* Avancer::constructeurVirtuel() const {

@@ -16,7 +16,6 @@ DefaireCommande::~DefaireCommande()
 
 void DefaireCommande::executer()
 {
-    std::cout << commande << std::endl;
     commande->desexecuter();
 }
 
