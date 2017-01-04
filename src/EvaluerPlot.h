@@ -12,7 +12,8 @@ public:
     EvaluerPlot(const std::string& s);
     EvaluerPlot();
     virtual ~EvaluerPlot();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
 };
 

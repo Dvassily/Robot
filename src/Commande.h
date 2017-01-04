@@ -12,7 +12,8 @@ class Commande
  public:
     Commande();
     Commande(const std::string &s);
-    virtual void executer() const = 0;
+    virtual void executer() = 0;
+    virtual void desexecuter() const = 0;
     virtual void setArgs(std::string args[]);
     virtual ~Commande();
     virtual Commande* constructeurVirtuel() const = 0;

@@ -12,9 +12,13 @@ EvaluerPlot::EvaluerPlot()
 EvaluerPlot::~EvaluerPlot()
 { }
 
-void EvaluerPlot::executer() const
+void EvaluerPlot::executer()
 {
     robot->evaluerPlot();
+}
+
+void EvaluerPlot::desexecuter() const {
+    
 }
 
 Commande* EvaluerPlot::constructeurVirtuel() const {

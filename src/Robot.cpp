@@ -139,10 +139,15 @@ Objet* Robot::getObjet() const {
     return objet;
 }
 
-const Position& Robot::getPosition() const {
+Position Robot::getPosition() const {
     return position;
 }
 
 const Plot* Robot::getPlot() const {
     return plot;
+}
+
+void Robot::setPosition(const Position& position) {
+    this->position.setx(position.getx());
+    this->position.sety(position.gety());
 }

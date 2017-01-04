@@ -11,7 +11,8 @@ public:
     Figer(const std::string& s);
     Figer();
     virtual ~Figer();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
 };
 

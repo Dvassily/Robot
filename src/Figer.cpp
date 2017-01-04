@@ -12,9 +12,13 @@ Figer::Figer()
 Figer::~Figer()
 { }
 
-void Figer::executer() const
+void Figer::executer()
 {
     robot->figer();
+}
+
+void Figer::desexecuter() const {
+    
 }
 
 Commande* Figer::constructeurVirtuel() const {

@@ -1,4 +1,4 @@
-> Exceptions commandes
+> Exceptions commandes (historique vide, ...)
 > Direction enum
 > Deplacer objet dans plot
 

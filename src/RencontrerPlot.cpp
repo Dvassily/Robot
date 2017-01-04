@@ -13,9 +13,13 @@ RencontrerPlot::~RencontrerPlot()
 RencontrerPlot::RencontrerPlot()
 { }
 
-void RencontrerPlot::executer() const
+void RencontrerPlot::executer()
 {
     robot->rencontrerPlot(*plot);
+}
+
+void RencontrerPlot::desexecuter() const {
+    
 }
 
 Commande* RencontrerPlot::constructeurVirtuel() const {

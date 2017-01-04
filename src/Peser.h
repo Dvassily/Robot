@@ -12,7 +12,8 @@ class Peser : public CommandeRobot
     Peser(const std::string& s);
     Peser();
     virtual ~Peser();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
 };
 

@@ -41,8 +41,10 @@ public:
     std::string getDirection() const;
     std::string getNomEtat() const;
     Objet* getObjet() const;
-    const Position& getPosition() const;
+    Position getPosition() const;
     const Plot* getPlot() const;
+
+    void setPosition(const Position& position);
 };
 
 #endif // __ROBOT_H__

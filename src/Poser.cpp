@@ -12,9 +12,13 @@ Poser::Poser()
 Poser::~Poser()
 { }
 
-void Poser::executer() const
+void Poser::executer()
 {
     robot->poser();
+}
+
+void Poser::desexecuter() const {
+    
 }
 
 Commande* Poser::constructeurVirtuel() const {

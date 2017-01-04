@@ -9,14 +9,18 @@ class Avancer : public CommandeRobot
     static Avancer a;
     unsigned x;
     unsigned y;
+    Position position;
     
  public:
     Avancer(const std::string& s);
     Avancer();
     virtual ~Avancer();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
-    virtual void setArgs(std::vector<std::string> tokens);
+    virtual void setArgs(std::vector<std::string> tokens,
+			 const std::map<std::string, Plot*> &plots,
+			 const std::map<std::string, Objet*> &objets);
 };
 
 #endif /* AVANCER_H */

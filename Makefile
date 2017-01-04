@@ -4,7 +4,7 @@ FLAGS=-Wall
 DSRC=src/
 DINC=src/
 
-OBJ=$(DOBJ)main.o $(DOBJ)Robot.o $(DOBJ)EtatRobot.o $(DOBJ)Objet.o $(DOBJ)Plot.o $(DOBJ)Position.o $(DOBJ)aVideFacePlot.o $(DOBJ)enChargeFacePlot.o $(DOBJ)EnRoute.o $(DOBJ)Fige.o $(DOBJ)WrongStateException.o $(DOBJ)AfficheurTexte.o $(DOBJ)LecteurFichier.o $(DOBJ)Commande.o $(DOBJ)CommandeRobot.o $(DOBJ)Saisir.o $(DOBJ)Figer.o $(DOBJ)Repartir.o $(DOBJ)aVide.o $(DOBJ)enCharge.o $(DOBJ)Avancer.o $(DOBJ)RencontrerPlot.o $(DOBJ)Tourner.o $(DOBJ)Poser.o $(DOBJ)Peser.o $(DOBJ)EvaluerPlot.o
+OBJ=$(DOBJ)main.o $(DOBJ)Robot.o $(DOBJ)EtatRobot.o $(DOBJ)Objet.o $(DOBJ)Plot.o $(DOBJ)Position.o $(DOBJ)aVideFacePlot.o $(DOBJ)enChargeFacePlot.o $(DOBJ)EnRoute.o $(DOBJ)Fige.o $(DOBJ)WrongStateException.o $(DOBJ)AfficheurTexte.o $(DOBJ)LecteurFichier.o $(DOBJ)Commande.o $(DOBJ)CommandeRobot.o $(DOBJ)Saisir.o $(DOBJ)Figer.o $(DOBJ)Repartir.o $(DOBJ)aVide.o $(DOBJ)enCharge.o $(DOBJ)Avancer.o $(DOBJ)RencontrerPlot.o $(DOBJ)Tourner.o $(DOBJ)Poser.o $(DOBJ)Peser.o $(DOBJ)EvaluerPlot.o $(DOBJ)DefaireException.o $(DOBJ)DefaireCommande.o
 
 $(EXE):$(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(EXE)
@@ -86,6 +86,12 @@ $(DOBJ)Peser.o:$(DSRC)Peser.cpp $(DINC)Peser.h
 	$(CC) $(FLAGS) -c $< -e $@ 
 
 $(DOBJ)EvaluerPlot.o:$(DSRC)EvaluerPlot.cpp $(DINC)EvaluerPlot.h 
+	$(CC) $(FLAGS) -c $< -e $@ 
+
+$(DOBJ)DefaireCommande.o:$(DSRC)DefaireCommande.cpp $(DINC)DefaireCommande.h 
+	$(CC) $(FLAGS) -c $< -e $@ 
+
+$(DOBJ)DefaireException.o:$(DSRC)DefaireException.cpp $(DINC)DefaireException.h 
 	$(CC) $(FLAGS) -c $< -e $@ 
 
 clean:

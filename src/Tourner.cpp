@@ -12,9 +12,13 @@ Tourner::Tourner()
 Tourner::~Tourner()
 { }
 
-void Tourner::executer() const
+void Tourner::executer()
 {
     robot->tourner(direction);
+}
+
+void Tourner::desexecuter() const {
+    
 }
 
 Commande* Tourner::constructeurVirtuel() const {

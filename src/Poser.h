@@ -12,7 +12,8 @@ public:
     Poser(const std::string& s);
     Poser();
     virtual ~Poser();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
 };
 

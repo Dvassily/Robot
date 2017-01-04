@@ -12,9 +12,13 @@ Saisir::Saisir()
 Saisir::~Saisir()
 { }
 
-void Saisir::executer() const
+void Saisir::executer()
 {
     robot->saisir(*objet);
+}
+
+void Saisir::desexecuter() const {
+    robot->poser();
 }
 
 Commande* Saisir::constructeurVirtuel() const {

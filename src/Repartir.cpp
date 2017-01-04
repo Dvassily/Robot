@@ -13,9 +13,13 @@ Repartir::Repartir()
 Repartir::~Repartir()
 { }
 
-void Repartir::executer() const
+void Repartir::executer()
 {
     robot->repartir();
+}
+
+void Repartir::desexecuter() const {
+    
 }
 
 Commande* Repartir::constructeurVirtuel() const {

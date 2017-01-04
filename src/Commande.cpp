@@ -28,3 +28,5 @@ Commande* Commande::nouvelleCommande(const std::string& s) {
 	return Commande::commandesInscrites()[s]->constructeurVirtuel();
     return nullptr;
 }
+
+

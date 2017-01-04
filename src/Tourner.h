@@ -13,7 +13,8 @@ class Tourner : public CommandeRobot
     Tourner(const std::string& s);
     Tourner();
     virtual ~Tourner();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
     virtual void setArgs(std::vector<std::string> tokens,
 			 const std::map<std::string, Plot*> &plots,

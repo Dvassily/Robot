@@ -13,7 +13,8 @@ class Saisir : public CommandeRobot
     Saisir(const std::string& s);
     Saisir();
     virtual ~Saisir();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
     virtual void setArgs(std::vector<std::string> tokens,
 			 const std::map<std::string, Plot*> &plots,

@@ -12,9 +12,13 @@ Peser::Peser()
 Peser::~Peser()
 { }
 
-void Peser::executer() const
+void Peser::executer()
 {
     robot->peser();
+}
+
+void Peser::desexecuter() const {
+    
 }
 
 Commande* Peser::constructeurVirtuel() const {

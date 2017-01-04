@@ -8,6 +8,7 @@ private:
     int y;
     
 public:
+    Position();
     Position(int x, int y);
     void setx(int x);
     void sety(int y);

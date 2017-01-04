@@ -16,6 +16,7 @@
 #include "Poser.h"
 #include "Peser.h"
 #include "EvaluerPlot.h"
+#include "DefaireCommande.h"
 
 using namespace std;
 
@@ -29,7 +30,7 @@ LecteurFichier::LecteurFichier(Robot& robot,
       objets(objets)
 { }
 
-void LecteurFichier::lireFichier() const {
+void LecteurFichier::lireFichier() {
     Plot plot(3);
     Objet objet(5);
     
@@ -45,12 +46,20 @@ void LecteurFichier::lireFichier() const {
 	     istream_iterator<string>(),
 	     back_inserter(command));
 
-	CommandeRobot* c = (CommandeRobot*) Commande::nouvelleCommande(command[0]);
+	CommandeRobot* c = nullptr;
+	std::cout << command[0] << std::endl;
+	if (command[0] == "DEFAIRE") {
+
+	} else {
+	    c = (CommandeRobot*) Commande::nouvelleCommande(command[0]);
+	}
 
 	if (c != nullptr) {
 	    c->setRobot(robot);
 	    c->setArgs(command, plots, objets);
 	    c->executer();
+
+	    history.push_back(c);
 	    delete c;
 	}
     }

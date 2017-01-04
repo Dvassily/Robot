@@ -12,7 +12,8 @@ public:
     Repartir(const std::string& s);
     Repartir();
     virtual ~Repartir();
-    virtual void executer() const;
+    virtual void executer();
+    virtual void desexecuter() const;
     virtual Commande* constructeurVirtuel() const;
 };
 
